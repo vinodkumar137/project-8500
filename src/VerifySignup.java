@@ -17,9 +17,11 @@ public class VerifySignup extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        if (session.getAttribute("user") == null)
-            session.setAttribute("user", new User(req.getParameter("name"), req.getParameter("email"),
-                    req.getParameter("password"), req.getParameter("phno")));
+        User user = session.getAttribute("user");
+        if ( user == null) {
+            user = new User(req.getParameter("name"), req.getParameter("email"), req.getParameter("password"), req.getParameter("phno"));
+            session.setAttribute("user", user);
+        }
         String otp = (String) session.getAttribute("otp");
         if (otp == null) {
             otp = String.valueOf((int) (Math.random() * 1e6));
@@ -27,7 +29,7 @@ public class VerifySignup extends HttpServlet {
         }
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
         Message message = Message.creator(
-                new com.twilio.type.PhoneNumber("+917983853822"),
+                new com.twilio.type.PhoneNumber("+91" + user.getPhno()),
                 new com.twilio.type.PhoneNumber("+12542563743"),
                 "One time password is:\n" + otp)
                 .create();
