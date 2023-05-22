@@ -1,0 +1,156 @@
+
+
+
+
+
+
+html,
+body {
+	display: flex;
+	justify-content: center;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 15px;
+}
+
+form {
+	border: 5px solid #f1f1f1;
+}
+
+input[type='text'],
+input[type='password'] {
+	width: 100%;
+	padding: 16px 8px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #8ebf42;
+	color: white;
+	padding: 14px 0;
+	margin: 10px 0;
+	border: none;
+	cursor: grabbing;
+	width: 100%;
+}
+
+h1,h3 {
+	text-align: center;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.formcontainer {
+	text-align: left;
+	margin: 24px 50px 12px;
+}
+
+.container {
+	padding: 16px 0;
+	text-align: left;
+}
+
+.coloreee {
+	background-color: #eee;
+}
+
+span.psw {
+	float: right;
+	padding-top: 0;
+	padding-right: 15px;
+}
+
+.paddingleft {
+	padding-left: 15px;
+}
+.button-text {
+	text-decoration: none;
+}
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+}
+html,
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+body,
+p {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 16px;
+	color: #666;
+}
+body {
+	background: url('/uploads/media/default/0001/01/49bff73f282c2c21f3341f1fe457fe35337b1792.jpeg')
+		no-repeat center;
+	background-size: cover;
+}
+form {
+	width: 90%;
+	padding: 10px 0;
+	border-radius: 5px;
+	box-shadow: 1px 1px 8px 0px #666;
+	background: #fff;
+}
+h1 {
+	margin: 0 0 10px 0;
+	font-weight: 400;
+}
+
+.block-item {
+	width: 50%;
+	padding: 20px;
+}
+
+.block-item.right {
+	border-left: 1px solid #aaa;
+	.twitter {
+		background: #429cd6;
+	}
+}
+
+.ibtn {
+	width: 50px;
+	font-size: 24px;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 40px;
+	margin: 10px 0;
+	outline: none;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #666;
+	background: #e8e8e8;
+	color: #fff;
+	cursor: pointer;
+}
+.btn:hover {
+	transform: scale(1.03);
+}
+
+.facebook {
+	background: #3a589e;
+	width: 150px;
+}
+.twitter {
+	background: #429cd6;
+}
+.google {
+	background: #d34836;
+}

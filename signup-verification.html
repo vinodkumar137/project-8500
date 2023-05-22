@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup verification</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div>
+			<h1>Verification</h1>
+			<form action="/create-account">
+				<div class="formcontainer">
+					<p>Enter verification code</p>
+					<input
+						type="text"
+						placeholder="Verification Code"
+						minlength="6"
+						maxlength="6"
+						required
+					/>
+					<div>Resend in <span id="time"></span></div>
+					Didn't recieve the code?<a class="resend"> Resend</a>
+				</div>
+				<button type="submit">Verify</button>
+			</form>
+		</div>
+		<script src="signup-verification.js"></script>
+	</body>
+</html>

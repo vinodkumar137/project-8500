@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+			integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+			crossorigin="anonymous"
+		/>
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<form action="/login" method='post'>
+			<h1>Welcome Back!</h1>
+			<div class="formcontainer">
+				<hr />
+				<div class="container">
+					<label for="uname"><strong>Email</strong></label>
+					<input
+						type="text"
+						placeholder="Email"
+						name="uname"
+						required
+					/>
+					<label for="psw"><strong>Password</strong></label>
+					<div class="pass">
+						<input
+							type="password"
+							class="password"
+							placeholder="Password"
+							name="psw"
+							required
+						/>
+						<i class="far fa-eye togglePassword"></i>
+					</div>
+				</div>
+				<button type="submit">Login</button>
+				<div class="container coloreee">
+					<span class="psw"><a href="#"> Forgot password?</a></span>
+					<span class="paddingleft"
+						><a href="create-new-account.html"> Create Account</a></span
+					>
+				</div>
+				<div class="main-block">
+					<div class="block-item left">
+						<p><small>or login with</small></p>
+					</div>
+					<div class="block-item right">
+						<a href="error.html" class="button-text">
+							<button
+								type="button"
+								class="btn facebook"
+								data-provider="facebook"
+							>
+								<i class="fab fa-facebook-f ibtn"></i><span>Facebook</span>
+							</button>
+						</a>
+						<a href="error.html" class="button-text"
+							><button type="button" class="btn google" data-provider="google">
+								<i class="fab fa-google ibtn"></i><span>Google</span>
+							</button></a
+						>
+					</div>
+				</div>
+			</div>
+		</form>
+		<script src="script.js"></script>
+	</body>
+</html>
